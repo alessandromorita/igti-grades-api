@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'https://amm-grades-app.herokuapp.com/',
+    origin: db.cors,
   })
 );
 app.use(gradeRouter);
@@ -34,6 +34,6 @@ app.get('/', (req, res) => {
   res.send('API em execucao');
 });
 
-app.listen(process.env.PORT || 8081, () => {
+app.listen(db.port, () => {
   console.log('API Iniciada');
 });

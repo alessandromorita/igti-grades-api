@@ -8,6 +8,8 @@ dotenv.config();
 
 db.mongoose = mongoose;
 db.url = process.env.MONGODB;
+db.port = process.env.PORT;
+db.cors = process.env.CORS_HOST;
 db.grades = gradesModel(mongoose);
 
 export { db };
