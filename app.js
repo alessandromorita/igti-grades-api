@@ -34,6 +34,6 @@ app.get('/', (req, res) => {
   res.send('API em execucao');
 });
 
-app.listen(db.port, () => {
+app.listen(db.port || 8081, () => {
   console.log('API Iniciada');
 });
